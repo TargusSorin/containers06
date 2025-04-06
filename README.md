@@ -42,7 +42,7 @@ docker run -d --name backend --network internal -v D:/containers06/mounts/site:/
 ```
 6) Am creat un container cu următoarele proprietăți: creat în baza imaginii nginx:1.23-alpine, directorul mounts/site este montat în /var/www/html, fișierul nginx/default.conf este montat în /etc/nginx/conf.d/default.conf, portul 80 al containerului este expus pe portul 80 al calculatorului gazdei și este creat în rețeaua **internal**:
 ```
-run -d --name frontend --network internal -p 80:80 -v D:/containers06/mounts/site:/var/www/html -v D:/containers06/nginx/default.conf:/etc/nginx/conf.d/default.conf nginx:1.23-alpine
+docker run -d --name frontend --network internal -p 80:80 -v D:/containers06/mounts/site:/var/www/html -v D:/containers06/nginx/default.conf:/etc/nginx/conf.d/default.conf nginx:1.23-alpine
 ```
 7) Când am accesat adresa **http://localhost** în browser a apărut site-ul creat la orele de PHP:
 ![image](./image/Screenshot%202025-04-06%20113046.png)
