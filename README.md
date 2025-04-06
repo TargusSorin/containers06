@@ -51,4 +51,9 @@ run -d --name frontend --network internal -p 80:80 -v D:/containers06/mounts/sit
 1. În ce mod în acest exemplu containerele pot interacționa unul cu celălalt?
 Containerele interacționează între ele prin faptul că fac parte din aceeași rețea și prin volumul montat comun.
 2. Cum văd containerele unul pe celălalt în cadrul rețelei internal?
-Făcând parte din aceeași rețea, containerele se văd în baza numelui 
+Făcând parte din aceeași rețea, containerele se văd în baza numelui fiecăruia.
+3. De ce a fost necesar să se suprascrie configurarea nginx?
+Configurația nginx a fost necesară să fie suprascrisă pentru a putea executa conținut PHP, nu doar conținut static, făcând legătura cu imaginea PHP-fpm.
+
+### Concluzie:
+În cadrul acestei lucrări de laborator, am studiat interacțiunea între containerele Docker care fac parte din aceeași rețea și care au un volum montat comun. Am văzut cum un container bazat pe imaginea serverului nginx comunică cu un container bazat pe imaginea PHP-fpm, facilitând procesarea scripturilor php. Astfel, am învățat cum o rețea de containere permite rularea unui site cu php pe un anumit port. 
