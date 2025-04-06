@@ -1,3 +1,12 @@
+### Numele lucrării de laborator
+Interacțiunea containerelor
+
+### Scopul lucrării
+Învățarea gestionării interacțiunii dintre mai multe containere.
+
+### Sarcina
+Crearea unei aplicații PHP pe baza a două containere: nginx, php-fpm
+
 ### Pașii de lucru
 1) Am creat directorul containers06 și în el am creat directorul mounts/site. În acest director am copiat un site de la perechile de PHP.
 1) În directorul rădăcină am creat un fișier .gitignore cu următorul conținut:
@@ -37,3 +46,9 @@ run -d --name frontend --network internal -p 80:80 -v D:/containers06/mounts/sit
 ```
 7) Când am accesat adresa **http://localhost** în browser a apărut site-ul creat la orele de PHP:
 ![image](./image/Screenshot%202025-04-06%20113046.png)
+
+#### Întrebări:
+1. În ce mod în acest exemplu containerele pot interacționa unul cu celălalt?
+Containerele interacționează între ele prin faptul că fac parte din aceeași rețea și prin volumul montat comun.
+2. Cum văd containerele unul pe celălalt în cadrul rețelei internal?
+Făcând parte din aceeași rețea, containerele se văd în baza numelui 
